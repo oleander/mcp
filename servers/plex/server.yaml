@@ -1,0 +1,25 @@
+name: plex-mcp
+image: ghcr.io/oleander/mcp:plex
+type: server
+meta:
+  category: productivity
+  tags:
+    - plex
+    - media
+    - streaming
+about:
+  title: Plex MCP Server
+  description: Browse libraries, search content, get viewing stats, and manage media on your Plex Media Server through natural language.
+  icon: https://avatars.githubusercontent.com/u/324832?s=200&v=4
+source:
+  project: https://github.com/niavasha/plex-mcp-server
+  commit: main
+config:
+  description: Provide the URL and authentication token for your Plex Media Server.
+  secrets:
+    - name: plex-mcp.url
+      env: PLEX_URL
+      example: http://localhost:32400
+    - name: plex-mcp.token
+      env: PLEX_TOKEN
+      example: <YOUR_PLEX_TOKEN>
